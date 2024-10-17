@@ -17,12 +17,6 @@ public class UserController {
     public String hello() {
         return "hello";
     }
-    //返回所有数据
-    @GetMapping("/list")
-    public List<User> list() {
-        return userService.listAll();
-    }
-
     //表单新增 将表单数据写入数据库
     @PostMapping("/save")
     public Result save(@RequestBody User user) {

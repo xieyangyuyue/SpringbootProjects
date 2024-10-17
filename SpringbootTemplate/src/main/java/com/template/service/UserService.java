@@ -1,9 +1,7 @@
 package com.template.service;
 
-import com.template.pojo.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-
-import java.util.List;
+import com.template.pojo.User;
 
 /**
 * @author 86187
@@ -12,5 +10,4 @@ import java.util.List;
 */
 public interface UserService extends IService<User> {
 
-    List<User> listAll();
 }
