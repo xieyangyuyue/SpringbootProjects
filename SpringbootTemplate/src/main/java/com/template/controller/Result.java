@@ -1,4 +1,4 @@
-package com.token.controller;
+package com.template.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.token.common;
+package com.template.common;
 
 import lombok.Data;
 

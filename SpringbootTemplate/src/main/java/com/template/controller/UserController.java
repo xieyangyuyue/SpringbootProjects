@@ -1,7 +1,7 @@
-package com.token.controller;
+package com.template.controller;
 
-import com.token.pojo.User;
-import com.token.service.UserService;
+import com.template.pojo.User;
+import com.template.service.UserService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 

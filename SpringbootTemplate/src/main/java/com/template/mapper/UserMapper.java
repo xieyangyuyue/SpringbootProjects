@@ -1,6 +1,6 @@
-package com.token.mapper;
+package com.template.mapper;
 
-import com.token.pojo.User;
+import com.template.pojo.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

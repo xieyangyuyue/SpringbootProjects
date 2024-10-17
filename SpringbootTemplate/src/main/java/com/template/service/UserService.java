@@ -1,6 +1,6 @@
-package com.token.service;
+package com.template.service;
 
-import com.token.pojo.User;
+import com.template.pojo.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
