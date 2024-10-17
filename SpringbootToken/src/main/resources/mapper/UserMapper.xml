@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.training.mapper.UserMapper">
+<mapper namespace="com.token.mapper.UserMapper">
 
 <!--    <resultMap id="BaseResultMap" type="com.training.pojo.User">-->
 <!--            <id property="id" column="id" jdbcType="INTEGER"/>-->
@@ -22,7 +22,7 @@
 <!--        phone,role_id,sValid-->
 <!--    </sql>-->
 
-    <select id="listAll" resultType="com.training.pojo.User">
+    <select id="listAll" resultType="com.token.pojo.User">
         select *
         from user
     </select>

@@ -1,9 +1,9 @@
-package com.training.service.impl;
+package com.token.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.training.pojo.User;
-import com.training.service.UserService;
-import com.training.mapper.UserMapper;
+import com.token.pojo.User;
+import com.token.service.UserService;
+import com.token.mapper.UserMapper;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

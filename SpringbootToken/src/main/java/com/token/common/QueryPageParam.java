@@ -1,4 +1,4 @@
-package com.training.common;
+package com.token.common;
 
 import lombok.Data;
 
