@@ -22,10 +22,12 @@ public class AuthController {
 
     @Autowired
     private JwtUtil jwtUtil;
+
     @GetMapping("/hello")
     public String hello() {
         return "hello";
     }
+
     @PostMapping("/authenticate")
     public ResponseEntity<String> createAuthenticationToken(@RequestBody User user) throws Exception {
         authenticationManager.authenticate(

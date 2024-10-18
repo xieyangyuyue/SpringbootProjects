@@ -20,13 +20,7 @@ public class JwtUtil {
 
     private String createToken(Map<String, Object> claims, String subject) {
         long expirationTimeInMillis = 3600000; // 1 hour
-        return Jwts.builder()
-                .setClaims(claims)
-                .setSubject(subject)
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + expirationTimeInMillis))
-                .signWith(SignatureAlgorithm.HS256, secret)
-                .compact();
+        return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis())).setExpiration(new Date(System.currentTimeMillis() + expirationTimeInMillis)).signWith(SignatureAlgorithm.HS256, secret).compact();
     }
 
     public Boolean validateToken(String token, String username) {

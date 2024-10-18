@@ -7,16 +7,24 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/user")
 @CrossOrigin
 public class UserController {
     @Resource
     private UserService userService;
-	 @GetMapping("/hello")
+
+    @GetMapping("/hello")
     public String hello() {
         return "hello";
     }
+
+    @GetMapping("/list")
+    public List<User> list() {
+        return userService.list();
+    }
+
     //表单新增 将表单数据写入数据库
     @PostMapping("/save")
     public Result save(@RequestBody User user) {

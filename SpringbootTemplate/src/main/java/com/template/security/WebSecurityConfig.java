@@ -34,14 +34,10 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(csrf -> csrf.disable())  // 禁用 CSRF
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/hello").permitAll()  // 允许访问认证接口
+        http.csrf(csrf -> csrf.disable())  // 禁用 CSRF
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/user/hello").permitAll()  // 允许访问认证接口
                         .anyRequest().authenticated()  // 其他请求需要认证
-                )
-                .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)  // 使用无状态的会话管理
+                ).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)  // 使用无状态的会话管理
                 );
 
         // 在 UsernamePasswordAuthenticationFilter 之前添加 JWT 过滤器
