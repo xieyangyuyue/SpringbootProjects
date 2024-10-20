@@ -1,11 +1,12 @@
-package com.token.controller;
+package com.template.controller;
 
-import com.token.pojo.User;
-import com.token.service.UserService;
+import com.template.pojo.User;
+import com.template.service.UserService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/user")
@@ -13,14 +14,15 @@ import java.util.List;
 public class UserController {
     @Resource
     private UserService userService;
-	 @GetMapping("/hello")
+
+    @GetMapping("/hello")
     public String hello() {
         return "hello";
     }
-    //返回所有数据
+
     @GetMapping("/list")
     public List<User> list() {
-        return userService.listAll();
+        return userService.list();
     }
 
     //表单新增 将表单数据写入数据库

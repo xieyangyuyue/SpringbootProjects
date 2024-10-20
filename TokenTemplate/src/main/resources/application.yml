@@ -1,0 +1,4 @@
+token:
+  secretKey: mySecretKey
+  refreshTime: 1800000
+  expiresTime: 3600000  # 1 hour

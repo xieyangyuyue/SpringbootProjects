@@ -3,14 +3,16 @@ spring:
     username: root
     password: 123
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/transport
-    #big_event ???? ???
-    #?????
+    url: jdbc:mysql://localhost:3306/softProject
+
 
 server:
-  port: 8091
+  port: 8090
 
 
 mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath*:mapper/**/*.xml
 
+jwt:
+  secret: mySecretKey
+  expiration: 3600000  # 1 hour
